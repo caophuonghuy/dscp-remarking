@@ -1,0 +1,79 @@
+    !!! ACL rules allowing incoming tcp/57411 for the eda-discovery grpc server
+    interface ethernet-1/1 {
+        admin-state enable
+        subinterface 0 {
+            ipv4 {
+                admin-state enable
+                address 10.0.1.1/24 {
+                }
+            }
+        }
+    }
+    interface ethernet-1/2 {
+        admin-state enable
+        subinterface 0 {
+            ipv4 {
+                admin-state enable
+                address 10.0.2.1/24 {
+                }
+            }
+        }
+    }
+    network-instance default {
+        interface ethernet-1/1.0 {
+        }
+        interface ethernet-1/2.0 {
+        }
+    }
+    qos {
+        queues {
+            queue unicast-7 {
+                queue-index 7
+            }
+        }
+        forwarding-classes {
+            forwarding-class fc7 {
+                output {
+                    unicast-queue unicast-7
+                }
+            }
+        }
+        classifiers {
+            dscp-policy classify-ef {
+                dscp 46 {
+                    forwarding-class fc7
+                }
+            }
+        }
+        rewrite-rules {
+            dscp-policy remark-ef {
+                map fc7 {
+                    dscp 40
+                }
+            }
+        }
+        interfaces {
+            interface ethernet-1/1 {
+                interface-ref {
+                    interface ethernet-1/1
+                    subinterface 0
+                }
+                input {
+                    classifiers {
+                        dscp-policy classify-ef
+                    }
+                }
+            }
+            interface ethernet-1/2 {
+                interface-ref {
+                    interface ethernet-1/2
+                    subinterface 0
+                }
+                output {
+                    rewrite-rules {
+                        dscp-policy remark-ef
+                    }
+                }
+            }
+        }
+    }
