@@ -6,7 +6,7 @@
       "prefix": "",
       "mgmt": {
         "network": "mngt",
-        "bridge": "br-f4054609d968",
+        "bridge": "br-789f8f216f0e",
         "ipv4-subnet": "172.50.50.0/24",
         "ipv4-gw": "172.50.50.1",
         "external-access": true
@@ -30,11 +30,11 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1a:64:00:00:00:00",
+      "mac-address": "1a:c8:00:00:00:00",
       "labels": {
         "clab-git-branch": "main",
-        "clab-git-hash": "f885eda",
-        "clab-mgmt-net-bridge": "br-f4054609d968",
+        "clab-git-hash": "228588b",
+        "clab-mgmt-net-bridge": "br-789f8f216f0e",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
         "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/dut",
@@ -66,8 +66,8 @@
       "mac-address": "",
       "labels": {
         "clab-git-branch": "main",
-        "clab-git-hash": "f885eda",
-        "clab-mgmt-net-bridge": "br-f4054609d968",
+        "clab-git-hash": "228588b",
+        "clab-mgmt-net-bridge": "br-789f8f216f0e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-client",
@@ -99,8 +99,8 @@
       "mac-address": "",
       "labels": {
         "clab-git-branch": "main",
-        "clab-git-hash": "f885eda",
-        "clab-mgmt-net-bridge": "br-f4054609d968",
+        "clab-git-hash": "228588b",
+        "clab-mgmt-net-bridge": "br-789f8f216f0e",
         "clab-node-group": "",
         "clab-node-kind": "keysight_ixia-c-one",
         "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-one",
@@ -112,18 +112,6 @@
         "containerlab": "dscp-remarking"
       },
       "port-bindings": [
-        {
-          "host-ip": "",
-          "host-port": 0,
-          "port": 2376,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "",
-          "host-port": 0,
-          "port": 40051,
-          "protocol": "tcp"
-        },
         {
           "host-ip": "",
           "host-port": 0,
@@ -141,6 +129,18 @@
           "host-port": 0,
           "port": 2375,
           "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 2376,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 40051,
+          "protocol": "tcp"
         }
       ]
     }
@@ -151,13 +151,13 @@
         "a": {
           "node": "ixia-c-one",
           "interface": "eth1",
-          "mac": "aa:c1:ab:e8:a4:e1",
+          "mac": "aa:c1:ab:2d:73:c4",
           "peer": "z"
         },
         "z": {
           "node": "dut",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:95:9a:81",
+          "mac": "aa:c1:ab:78:91:4d",
           "peer": "a"
         }
       }
@@ -167,13 +167,13 @@
         "a": {
           "node": "ixia-c-one",
           "interface": "eth2",
-          "mac": "aa:c1:ab:7a:d2:48",
+          "mac": "aa:c1:ab:2a:2a:4b",
           "peer": "z"
         },
         "z": {
           "node": "dut",
           "interface": "e1-2",
-          "mac": "aa:c1:ab:3f:86:14",
+          "mac": "aa:c1:ab:dc:02:bf",
           "peer": "a"
         }
       }

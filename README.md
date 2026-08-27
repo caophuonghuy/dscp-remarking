@@ -32,4 +32,4 @@ Enter the configuration of client (IP address, gateway, VLAN, dot1p, number of i
 
 to do a quick one for just DSCP test with null port in both sides. This is the version 0.1 of this tool)
 
-In this topo, the DUT (device under test) is a 7220 IXR-D2L container which will remark ip packet with dscp 46 to dscp 40. The DUT can be replaced by another box or a network for more complicated setup.
+In this simple setup, the DUT (device under test) is a 7220 IXR-D2L container which will remark ip packet with dscp 46 to dscp 40. The two ports are all null ports with no VLAN configured. The DUT can be replaced by another box or a network for more complicated setup.
