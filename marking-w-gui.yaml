@@ -1,0 +1,29 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# Cao Phuong Huy - phuong_huy.cao@nokia.com      #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+name: qos-marking
+prefix: ""
+mgmt:
+  network: mngt
+  ipv4-subnet: 172.50.50.0/24
+topology:
+  nodes:
+    ixia-c-one:
+      kind: keysight_ixia-c-one
+      image: ghcr.io/open-traffic-generator/ixia-c-one:1.61.0-1
+      mgmt-ipv4: 172.50.50.2
+    ixia-c-client:
+      kind: linux
+      image: ghcr.io/caophuonghuy/ixia-c-client:1.0
+      mgmt-ipv4: 172.50.50.3
+      ports:
+        - 8443:8443
+    dut:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:latest
+      startup-config: ./configs/dut.partial.txt
+      mgmt-ipv4: 172.50.50.4
+
+  links:
+    - endpoints: ["ixia-c-one:eth1", "dut:e1-1"]
+    - endpoints: ["ixia-c-one:eth2", "dut:e1-2"]

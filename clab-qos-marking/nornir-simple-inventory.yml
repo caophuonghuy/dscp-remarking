@@ -1,0 +1,16 @@
+---
+ixia-c-one:
+    username: 
+    password: 
+    platform: keysight_ixia-c-one
+    hostname: 172.50.50.2
+ixia-c-client:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.50.50.3
+dut:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 172.50.50.4
