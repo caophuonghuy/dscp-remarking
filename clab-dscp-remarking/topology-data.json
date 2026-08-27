@@ -6,7 +6,7 @@
       "prefix": "",
       "mgmt": {
         "network": "mngt",
-        "bridge": "br-648f20ab1d85",
+        "bridge": "br-f4054609d968",
         "ipv4-subnet": "172.50.50.0/24",
         "ipv4-gw": "172.50.50.1",
         "external-access": true
@@ -21,7 +21,7 @@
       "longname": "dut",
       "fqdn": "dut.dscp-remarking.io",
       "group": "",
-      "labdir": "/root/templates/testers2/clab-dscp-remarking/dut",
+      "labdir": "/root/qos/dscp-marking/clab-dscp-remarking/dut",
       "kind": "nokia_srlinux",
       "image": "ghcr.io/nokia/srlinux:latest",
       "mgmt-net": "",
@@ -30,17 +30,19 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1a:f4:00:00:00:00",
+      "mac-address": "1a:64:00:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-648f20ab1d85",
+        "clab-git-branch": "main",
+        "clab-git-hash": "f885eda",
+        "clab-mgmt-net-bridge": "br-f4054609d968",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
-        "clab-node-lab-dir": "/root/templates/testers2/clab-dscp-remarking/dut",
+        "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/dut",
         "clab-node-longname": "dut",
         "clab-node-name": "dut",
         "clab-node-type": "ixr-d2l",
         "clab-owner": "root",
-        "clab-topo-file": "/root/templates/testers2/dscp-remarking.yaml",
+        "clab-topo-file": "/root/qos/dscp-marking/qos-marking.yaml",
         "containerlab": "dscp-remarking"
       },
       "port-bindings": [
@@ -52,9 +54,9 @@
       "longname": "ixia-c-client",
       "fqdn": "ixia-c-client.dscp-remarking.io",
       "group": "",
-      "labdir": "/root/templates/testers2/clab-dscp-remarking/ixia-c-client",
+      "labdir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-client",
       "kind": "linux",
-      "image": "ghcr.io/caophuonghuy/ixia-c-client:0.1",
+      "image": "ghcr.io/caophuonghuy/ixia-c-client:0.2",
       "mgmt-net": "",
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.50.50.3",
@@ -63,15 +65,17 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-648f20ab1d85",
+        "clab-git-branch": "main",
+        "clab-git-hash": "f885eda",
+        "clab-mgmt-net-bridge": "br-f4054609d968",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/root/templates/testers2/clab-dscp-remarking/ixia-c-client",
+        "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-client",
         "clab-node-longname": "ixia-c-client",
         "clab-node-name": "ixia-c-client",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/templates/testers2/dscp-remarking.yaml",
+        "clab-topo-file": "/root/qos/dscp-marking/qos-marking.yaml",
         "containerlab": "dscp-remarking"
       },
       "port-bindings": [
@@ -83,7 +87,7 @@
       "longname": "ixia-c-one",
       "fqdn": "ixia-c-one.dscp-remarking.io",
       "group": "",
-      "labdir": "/root/templates/testers2/clab-dscp-remarking/ixia-c-one",
+      "labdir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-one",
       "kind": "keysight_ixia-c-one",
       "image": "ghcr.io/open-traffic-generator/ixia-c-one:1.58.0-12",
       "mgmt-net": "",
@@ -94,15 +98,17 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-648f20ab1d85",
+        "clab-git-branch": "main",
+        "clab-git-hash": "f885eda",
+        "clab-mgmt-net-bridge": "br-f4054609d968",
         "clab-node-group": "",
         "clab-node-kind": "keysight_ixia-c-one",
-        "clab-node-lab-dir": "/root/templates/testers2/clab-dscp-remarking/ixia-c-one",
+        "clab-node-lab-dir": "/root/qos/dscp-marking/clab-dscp-remarking/ixia-c-one",
         "clab-node-longname": "ixia-c-one",
         "clab-node-name": "ixia-c-one",
         "clab-node-type": "",
         "clab-owner": "root",
-        "clab-topo-file": "/root/templates/testers2/dscp-remarking.yaml",
+        "clab-topo-file": "/root/qos/dscp-marking/qos-marking.yaml",
         "containerlab": "dscp-remarking"
       },
       "port-bindings": [
@@ -145,13 +151,13 @@
         "a": {
           "node": "ixia-c-one",
           "interface": "eth1",
-          "mac": "aa:c1:ab:f3:88:64",
+          "mac": "aa:c1:ab:e8:a4:e1",
           "peer": "z"
         },
         "z": {
           "node": "dut",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:04:90:45",
+          "mac": "aa:c1:ab:95:9a:81",
           "peer": "a"
         }
       }
@@ -161,13 +167,13 @@
         "a": {
           "node": "ixia-c-one",
           "interface": "eth2",
-          "mac": "aa:c1:ab:43:b5:85",
+          "mac": "aa:c1:ab:7a:d2:48",
           "peer": "z"
         },
         "z": {
           "node": "dut",
           "interface": "e1-2",
-          "mac": "aa:c1:ab:cb:2a:e8",
+          "mac": "aa:c1:ab:3f:86:14",
           "peer": "a"
         }
       }
