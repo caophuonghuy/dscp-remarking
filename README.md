@@ -11,7 +11,9 @@ In the lab, there is also an ixia client container named ixia-c-client. The clie
 To deploy the lab:
 
 #git clone https://github.com/caophuonghuy/dscp-remarking
+
 #cd dscp-remarking/
+
 #clab deploy -t qos-marking.yaml
 
 Access the client by command:
