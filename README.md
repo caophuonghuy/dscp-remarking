@@ -14,6 +14,20 @@ To deploy the lab:
 
 #cd dscp-remarking/
 
+#clab deploy -t marking-w-gui.yaml
+
+Access the web at
+
+https://ip-of-the-VM-which-host-containerlab:8443
+
+and start the test
+
+End.
+
+#------------------------------------------------------
+
+Below is info about old verstion with CLI -> to be updated later
+
 #clab deploy -t qos-marking.yaml
 
 Access the client by command:
