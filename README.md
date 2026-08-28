@@ -1,10 +1,10 @@
 # DSCP and Dot1p marking/remarking test
-Small simple to use a web-based client to control ixia-c-one using a web-based client for QoS marking test with all setup on containerlab.
+A simple setup using a web-based client to control ixia-c-one for QoS marking test with all nodes are containers on containerlab.
 ## Topology & Test Overview
 Here is a simple topology with two devices participating in testing.
 
 * **Tester**: ixia-c-one container
-* **DUT (Device Uner Test)**: Nokia 7220 IXR-D2L
+* **DUT (Device Under Test)**: Nokia 7220 IXR-D2L router
 
 Two hosts, host A connected to `eth-1` and host B connected to `eth-2` are created inside **ixia-c-one** testers. 
 
