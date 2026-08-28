@@ -1,4 +1,4 @@
-# dscp-remarking
+# dscp and/or dot1p marking/remarking test
 
 Tools to test qos marking, remarking with ixia-c-one.
 
