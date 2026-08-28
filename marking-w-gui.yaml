@@ -8,7 +8,7 @@ mgmt:
   ipv4-subnet: 172.50.50.0/24
 topology:
   nodes:
-    ixia-c-one:
+    ixia-c-one: # keep this name unchanged
       kind: keysight_ixia-c-one
       image: ghcr.io/open-traffic-generator/ixia-c-one:1.61.0-1
       mgmt-ipv4: 172.50.50.2
