@@ -23,7 +23,7 @@ Two hosts, host A connected to `eth-1` and host B connected to `eth-2` are creat
 
 In the setup, the DUT is a router with interface eth-1/1 has IP 10.0.1.1/24 and interface eth-1/2 has IP 10.0.2.1/24. Both ports set with no VLAN. If the ip packets marked with DSCP 46 when being sent from host B, they will be re-marked with DSCP 40 by the router.
 
-The DUT can be replaced by another box or a network for more complicated setup but please <span style="color: red;">**do not change the name of ixia-c-one container**</span>
+The DUT can be replaced by another box or a network for more complicated setup.
 ## Deploy the lab:
 
 Clone the repo to your VM: 
