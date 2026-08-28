@@ -5,17 +5,12 @@ Here is a simple topology with two devices participating in testing.
 
 * **Tester**: ixia-c-one container
 * **DUT (Device Uner Test)**: Nokia 7220 IXR-D2L
-```console
-            +------------+              +--------+
-            |    Host A(eth-1)-----(eth-1/1)     |
-            |            |              |        |
-            |   Tester   |              |   DUT  |
-            |            |              |        |
-            |    HostB(eth-2)-----(eth-1/2)      |
-            +------------+              +--------+
 
-```
 Two hosts, host A connected to `eth-1` and host B connected to `eth-2` are created inside **ixia-c-one** testers. 
+
+<p align="center">
+  <img src="./pictures/lab_topo.png" alt="lab topo" width="700">
+</p>
 
 * **Traffic Generation:** IP packets encapsulated in Ethernet frames (with user-defined DSCP and optional 802.1p values) are transmitted between the two hosts.
 * **Verification:** The tester monitors the ports, captures incoming frames, and verifies the QoS markings (DSCP and 802.1p).
@@ -42,7 +37,11 @@ Access the web interface at:
 
 https://ip-of-the-VM-which-host-containerlab:8443
 
-and start the test.
+and start the test. The web interface appears as below.
+
+<p align="center">
+  <img src="./pictures/web_screen.png" alt="capture sreen of the Tool" width="700">
+</p>
 
 ## Tools with CLI interface
 
